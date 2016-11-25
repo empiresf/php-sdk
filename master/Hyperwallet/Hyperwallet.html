@@ -1,0 +1,2878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Hyperwallet\Hyperwallet | Hyperwallet REST SDK</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/sami.css">
+        <script src="../js/jquery-1.11.1.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/typeahead.min.js"></script>
+        <script src="../sami.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    
+    
+    </head>
+
+    <body id="class" data-name="class:Hyperwallet_Hyperwallet" data-root-path="../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../search.html" method="GET">
+            <span class="glyphicon glyphicon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Hyperwallet REST SDK</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                                            <li><a href="../namespaces.html">Namespaces</a></li>
+                                        <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                                                            <li><a href="../Hyperwallet.html">Hyperwallet</a></li>
+    
+                <li>Hyperwallet</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Hyperwallet
+                
+        </h1>
+    </div>
+
+    <p>    class
+    <strong>Hyperwallet</strong>
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>The Hyperwallet SDK Client</p>                    </div>
+    
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $username, string $password, string|null $programToken = null, string $server = &#039;https://sandbox.hyperwallet.com&#039;)
+        
+                                            <p>Creates a instance of the SDK Client</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createUser">createUser</a>(<a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a> $user)
+        
+                                            <p>Create a user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUser">getUser</a>(string $userToken)
+        
+                                            <p>Get a user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updateUser">updateUser</a>(<a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a> $user)
+        
+                                            <p>Update a user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listUsers">listUsers</a>(array $options = array())
+        
+                                            <p>List all users</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createPrepaidCard">createPrepaidCard</a>(string $userToken, <a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a> $prepaidCard)
+        
+                                            <p>Create a prepaid card</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrepaidCard">getPrepaidCard</a>(string $userToken, string $prepaidCardToken)
+        
+                                            <p>Get a prepaid card</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updatePrepaidCard">updatePrepaidCard</a>(string $userToken, <a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a> $prepaidCard)
+        
+                                            <p>Update a prepaid card</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listPrepaidCards">listPrepaidCards</a>(string $userToken, array $options = array())
+        
+                                            <p>List all prepaid cards</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_suspendPrepaidCard">suspendPrepaidCard</a>(string $userToken, string $prepaidCardToken)
+        
+                                            <p>Suspend a prepaid card</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unsuspendPrepaidCard">unsuspendPrepaidCard</a>(string $userToken, string $prepaidCardToken)
+        
+                                            <p>Unsuspend a prepaid card</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lostOrStolenPrepaidCard">lostOrStolenPrepaidCard</a>(string $userToken, string $prepaidCardToken)
+        
+                                            <p>Mark a prepaid card as lost or stolen</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deactivatePrepaidCard">deactivatePrepaidCard</a>(string $userToken, string $prepaidCardToken)
+        
+                                            <p>Deactivate a prepaid card</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lockPrepaidCard">lockPrepaidCard</a>(string $userToken, string $prepaidCardToken)
+        
+                                            <p>Lock a prepaid card</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unlockPrepaidCard">unlockPrepaidCard</a>(string $userToken, string $prepaidCardToken)
+        
+                                            <p>Unlock a prepaid card</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createPrepaidCardStatusTransition">createPrepaidCardStatusTransition</a>(string $userToken, string $prepaidCardToken, <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a> $transition)
+        
+                                            <p>Create a prepaid card status transition</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPrepaidCardStatusTransition">getPrepaidCardStatusTransition</a>(string $userToken, string $prepaidCardToken, string $statusTransitionToken)
+        
+                                            <p>Get a prepaid card status transition</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listPrepaidCardStatusTransitions">listPrepaidCardStatusTransitions</a>(string $userToken, string $prepaidCardToken, array $options = array())
+        
+                                            <p>List all prepaid card status transitions</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createBankAccount">createBankAccount</a>(string $userToken, <a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a> $bankAccount)
+        
+                                            <p>Create a bank account</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBankAccount">getBankAccount</a>(string $userToken, string $bankAccountToken)
+        
+                                            <p>Get a bank account</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updateBankAccount">updateBankAccount</a>(string $userToken, <a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a> $bankAccount)
+        
+                                            <p>Update a bank account</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listBankAccounts">listBankAccounts</a>(string $userToken, array $options = array())
+        
+                                            <p>List all bank accounts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/BankAccountStatusTransition.html"><abbr title="Hyperwallet\Model\BankAccountStatusTransition">BankAccountStatusTransition</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_deactivateBankAccount">deactivateBankAccount</a>(string $userToken, string $bankAccountToken)
+        
+                                            <p>Deactivate a bank account</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/BankAccountStatusTransition.html"><abbr title="Hyperwallet\Model\BankAccountStatusTransition">BankAccountStatusTransition</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createBankAccountStatusTransition">createBankAccountStatusTransition</a>(string $userToken, string $bankAccountToken, <a href="../Hyperwallet/Model/BankAccountStatusTransition.html"><abbr title="Hyperwallet\Model\BankAccountStatusTransition">BankAccountStatusTransition</abbr></a> $transition)
+        
+                                            <p>Create a bank account status transition</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listBankAccountStatusTransitions">listBankAccountStatusTransitions</a>(string $userToken, string $bankAccountToken, array $options = array())
+        
+                                            <p>List all bank account status transitions</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a>|<a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createTransferMethod">createTransferMethod</a>(string $userToken, string $jsonCacheToken, <a href="../Hyperwallet/Model/TransferMethod.html"><abbr title="Hyperwallet\Model\TransferMethod">TransferMethod</abbr></a> $transferMethod = null)
+        
+                                            <p>Create a transfer method</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listBalancesForUser">listBalancesForUser</a>(string $userToken, array $options = array())
+        
+                                            <p>List balances for a user</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listBalancesForPrepaidCard">listBalancesForPrepaidCard</a>(string $userToken, string $prepaidCardToken, array $options = array())
+        
+                                            <p>List balances for a prepaid card</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listBalancesForAccount">listBalancesForAccount</a>(string $programToken, string $accountToken, array $options = array())
+        
+                                            <p>List balances for a program account</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/Payment.html"><abbr title="Hyperwallet\Model\Payment">Payment</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createPayment">createPayment</a>(<a href="../Hyperwallet/Model/Payment.html"><abbr title="Hyperwallet\Model\Payment">Payment</abbr></a> $payment)
+        
+                                            <p>Create a payment</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/Payment.html"><abbr title="Hyperwallet\Model\Payment">Payment</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPayment">getPayment</a>(string $paymentToken)
+        
+                                            <p>Get a payment</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listPayments">listPayments</a>(array $options = array())
+        
+                                            <p>List all payments</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/Program.html"><abbr title="Hyperwallet\Model\Program">Program</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProgram">getProgram</a>(string $programToken)
+        
+                                            <p>Get a program</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/ProgramAccount.html"><abbr title="Hyperwallet\Model\ProgramAccount">ProgramAccount</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getProgramAccount">getProgramAccount</a>(string $programToken, string $accountToken)
+        
+                                            <p>Get a program account</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/TransferMethodConfiguration.html"><abbr title="Hyperwallet\Model\TransferMethodConfiguration">TransferMethodConfiguration</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getTransferMethodConfiguration">getTransferMethodConfiguration</a>(string $userToken, string $country, string $currency, string $type, string $profileType)
+        
+                                            <p>Get a transfer method configuration</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listTransferMethodConfigurations">listTransferMethodConfigurations</a>(string $userToken, array $options = array())
+        
+                                            <p>List all transfer method configurations</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listReceiptsForProgramAccount">listReceiptsForProgramAccount</a>(string $programToken, string $accountToken, array $options = array())
+        
+                                            <p>List all program account receipts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listReceiptsForUser">listReceiptsForUser</a>(string $userToken, array $options = array())
+        
+                                            <p>List all user receipts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listReceiptsForPrepaidCard">listReceiptsForPrepaidCard</a>(string $userToken, string $prepaidCardToken, array $options = array())
+        
+                                            <p>List all prepaid card receipts</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Model/WebhookNotification.html"><abbr title="Hyperwallet\Model\WebhookNotification">WebhookNotification</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWebhookNotification">getWebhookNotification</a>(string $webhookNotificationToken)
+        
+                                            <p>Get a webhook notification</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_listWebhookNotifications">listWebhookNotifications</a>(array $options = array())
+        
+                                            <p>List all webhook notifications</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line         line 53</div>
+        <code>                    
+    <strong>__construct</strong>(string $username, string $password, string|null $programToken = null, string $server = &#039;https://sandbox.hyperwallet.com&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Creates a instance of the SDK Client</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$username</td>
+                <td>The API username</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$password</td>
+                <td>The API password</td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$programToken</td>
+                <td>The program token that is used for some API calls</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$server</td>
+                <td>The API server to connect to</td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createUser">
+        <div class="location">at line         line 74</div>
+        <code>                    <a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a>
+    <strong>createUser</strong>(<a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a user</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a></td>
+                <td>$user</td>
+                <td>The user data</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUser">
+        <div class="location">at line         line 89</div>
+        <code>                    <a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a>
+    <strong>getUser</strong>(string $userToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a user</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateUser">
+        <div class="location">at line         line 106</div>
+        <code>                    <a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a>
+    <strong>updateUser</strong>(<a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a> $user)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update a user</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a></td>
+                <td>$user</td>
+                <td>The user</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/User.html"><abbr title="Hyperwallet\Model\User">User</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listUsers">
+        <div class="location">at line         line 122</div>
+        <code>                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+    <strong>listUsers</strong>(array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List all users</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createPrepaidCard">
+        <div class="location">at line         line 143</div>
+        <code>                    <a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a>
+    <strong>createPrepaidCard</strong>(string $userToken, <a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a> $prepaidCard)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a prepaid card</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a></td>
+                <td>$prepaidCard</td>
+                <td>The prepaid card data</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrepaidCard">
+        <div class="location">at line         line 161</div>
+        <code>                    <a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a>
+    <strong>getPrepaidCard</strong>(string $userToken, string $prepaidCardToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a prepaid card</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prepaidCardToken</td>
+                <td>The prepaid card token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updatePrepaidCard">
+        <div class="location">at line         line 185</div>
+        <code>                    <a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a>
+    <strong>updatePrepaidCard</strong>(string $userToken, <a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a> $prepaidCard)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update a prepaid card</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a></td>
+                <td>$prepaidCard</td>
+                <td>The prepaid card data</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listPrepaidCards">
+        <div class="location">at line         line 209</div>
+        <code>                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+    <strong>listPrepaidCards</strong>(string $userToken, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List all prepaid cards</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The query parameters to send</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_suspendPrepaidCard">
+        <div class="location">at line         line 229</div>
+        <code>                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+    <strong>suspendPrepaidCard</strong>(string $userToken, string $prepaidCardToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Suspend a prepaid card</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prepaidCardToken</td>
+                <td>The prepaid card token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unsuspendPrepaidCard">
+        <div class="location">at line         line 246</div>
+        <code>                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+    <strong>unsuspendPrepaidCard</strong>(string $userToken, string $prepaidCardToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unsuspend a prepaid card</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prepaidCardToken</td>
+                <td>The prepaid card token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lostOrStolenPrepaidCard">
+        <div class="location">at line         line 263</div>
+        <code>                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+    <strong>lostOrStolenPrepaidCard</strong>(string $userToken, string $prepaidCardToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Mark a prepaid card as lost or stolen</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prepaidCardToken</td>
+                <td>The prepaid card token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deactivatePrepaidCard">
+        <div class="location">at line         line 280</div>
+        <code>                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+    <strong>deactivatePrepaidCard</strong>(string $userToken, string $prepaidCardToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Deactivate a prepaid card</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prepaidCardToken</td>
+                <td>The prepaid card token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lockPrepaidCard">
+        <div class="location">at line         line 297</div>
+        <code>                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+    <strong>lockPrepaidCard</strong>(string $userToken, string $prepaidCardToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Lock a prepaid card</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prepaidCardToken</td>
+                <td>The prepaid card token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unlockPrepaidCard">
+        <div class="location">at line         line 314</div>
+        <code>                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+    <strong>unlockPrepaidCard</strong>(string $userToken, string $prepaidCardToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Unlock a prepaid card</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prepaidCardToken</td>
+                <td>The prepaid card token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createPrepaidCardStatusTransition">
+        <div class="location">at line         line 332</div>
+        <code>                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+    <strong>createPrepaidCardStatusTransition</strong>(string $userToken, string $prepaidCardToken, <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a> $transition)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a prepaid card status transition</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prepaidCardToken</td>
+                <td>The prepaid card token</td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a></td>
+                <td>$transition</td>
+                <td>The status transition</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPrepaidCardStatusTransition">
+        <div class="location">at line         line 357</div>
+        <code>                    <a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a>
+    <strong>getPrepaidCardStatusTransition</strong>(string $userToken, string $prepaidCardToken, string $statusTransitionToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a prepaid card status transition</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prepaidCardToken</td>
+                <td>The prepaid card token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$statusTransitionToken</td>
+                <td>The status transition token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/PrepaidCardStatusTransition.html"><abbr title="Hyperwallet\Model\PrepaidCardStatusTransition">PrepaidCardStatusTransition</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listPrepaidCardStatusTransitions">
+        <div class="location">at line         line 387</div>
+        <code>                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+    <strong>listPrepaidCardStatusTransitions</strong>(string $userToken, string $prepaidCardToken, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List all prepaid card status transitions</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prepaidCardToken</td>
+                <td>The prepaid card token</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The query parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createBankAccount">
+        <div class="location">at line         line 418</div>
+        <code>                    <a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a>
+    <strong>createBankAccount</strong>(string $userToken, <a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a> $bankAccount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a bank account</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a></td>
+                <td>$bankAccount</td>
+                <td>The bank account data</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBankAccount">
+        <div class="location">at line         line 436</div>
+        <code>                    <a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a>
+    <strong>getBankAccount</strong>(string $userToken, string $bankAccountToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a bank account</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$bankAccountToken</td>
+                <td>The bank account token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateBankAccount">
+        <div class="location">at line         line 460</div>
+        <code>                    <a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a>
+    <strong>updateBankAccount</strong>(string $userToken, <a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a> $bankAccount)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update a bank account</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a></td>
+                <td>$bankAccount</td>
+                <td>The bank account data</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listBankAccounts">
+        <div class="location">at line         line 484</div>
+        <code>                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+    <strong>listBankAccounts</strong>(string $userToken, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List all bank accounts</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The query parameters to send</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deactivateBankAccount">
+        <div class="location">at line         line 504</div>
+        <code>                    <a href="../Hyperwallet/Model/BankAccountStatusTransition.html"><abbr title="Hyperwallet\Model\BankAccountStatusTransition">BankAccountStatusTransition</abbr></a>
+    <strong>deactivateBankAccount</strong>(string $userToken, string $bankAccountToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Deactivate a bank account</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$bankAccountToken</td>
+                <td>The bank account token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/BankAccountStatusTransition.html"><abbr title="Hyperwallet\Model\BankAccountStatusTransition">BankAccountStatusTransition</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createBankAccountStatusTransition">
+        <div class="location">at line         line 522</div>
+        <code>                    <a href="../Hyperwallet/Model/BankAccountStatusTransition.html"><abbr title="Hyperwallet\Model\BankAccountStatusTransition">BankAccountStatusTransition</abbr></a>
+    <strong>createBankAccountStatusTransition</strong>(string $userToken, string $bankAccountToken, <a href="../Hyperwallet/Model/BankAccountStatusTransition.html"><abbr title="Hyperwallet\Model\BankAccountStatusTransition">BankAccountStatusTransition</abbr></a> $transition)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a bank account status transition</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$bankAccountToken</td>
+                <td>The bank account token</td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Model/BankAccountStatusTransition.html"><abbr title="Hyperwallet\Model\BankAccountStatusTransition">BankAccountStatusTransition</abbr></a></td>
+                <td>$transition</td>
+                <td>The status transition</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/BankAccountStatusTransition.html"><abbr title="Hyperwallet\Model\BankAccountStatusTransition">BankAccountStatusTransition</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listBankAccountStatusTransitions">
+        <div class="location">at line         line 548</div>
+        <code>                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+    <strong>listBankAccountStatusTransitions</strong>(string $userToken, string $bankAccountToken, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List all bank account status transitions</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$bankAccountToken</td>
+                <td>The bank account token</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The query parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createTransferMethod">
+        <div class="location">at line         line 580</div>
+        <code>                    <a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a>|<a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a>
+    <strong>createTransferMethod</strong>(string $userToken, string $jsonCacheToken, <a href="../Hyperwallet/Model/TransferMethod.html"><abbr title="Hyperwallet\Model\TransferMethod">TransferMethod</abbr></a> $transferMethod = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a transfer method</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$jsonCacheToken</td>
+                <td>The json cache token supplied by the widget</td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Model/TransferMethod.html"><abbr title="Hyperwallet\Model\TransferMethod">TransferMethod</abbr></a></td>
+                <td>$transferMethod</td>
+                <td>The transfer method data (to override certain fields)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/BankAccount.html"><abbr title="Hyperwallet\Model\BankAccount">BankAccount</abbr></a>|<a href="../Hyperwallet/Model/PrepaidCard.html"><abbr title="Hyperwallet\Model\PrepaidCard">PrepaidCard</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listBalancesForUser">
+        <div class="location">at line         line 609</div>
+        <code>                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+    <strong>listBalancesForUser</strong>(string $userToken, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List balances for a user</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The query parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listBalancesForPrepaidCard">
+        <div class="location">at line         line 630</div>
+        <code>                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+    <strong>listBalancesForPrepaidCard</strong>(string $userToken, string $prepaidCardToken, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List balances for a prepaid card</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prepaidCardToken</td>
+                <td>The prepaid card token</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The query parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listBalancesForAccount">
+        <div class="location">at line         line 657</div>
+        <code>                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+    <strong>listBalancesForAccount</strong>(string $programToken, string $accountToken, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List balances for a program account</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$programToken</td>
+                <td>The program token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accountToken</td>
+                <td>The account token</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The query parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createPayment">
+        <div class="location">at line         line 686</div>
+        <code>                    <a href="../Hyperwallet/Model/Payment.html"><abbr title="Hyperwallet\Model\Payment">Payment</abbr></a>
+    <strong>createPayment</strong>(<a href="../Hyperwallet/Model/Payment.html"><abbr title="Hyperwallet\Model\Payment">Payment</abbr></a> $payment)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Create a payment</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Model/Payment.html"><abbr title="Hyperwallet\Model\Payment">Payment</abbr></a></td>
+                <td>$payment</td>
+                <td>The payment</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/Payment.html"><abbr title="Hyperwallet\Model\Payment">Payment</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPayment">
+        <div class="location">at line         line 701</div>
+        <code>                    <a href="../Hyperwallet/Model/Payment.html"><abbr title="Hyperwallet\Model\Payment">Payment</abbr></a>
+    <strong>getPayment</strong>(string $paymentToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a payment</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$paymentToken</td>
+                <td>The payment token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/Payment.html"><abbr title="Hyperwallet\Model\Payment">Payment</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listPayments">
+        <div class="location">at line         line 717</div>
+        <code>                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+    <strong>listPayments</strong>(array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List all payments</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The query parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProgram">
+        <div class="location">at line         line 737</div>
+        <code>                    <a href="../Hyperwallet/Model/Program.html"><abbr title="Hyperwallet\Model\Program">Program</abbr></a>
+    <strong>getProgram</strong>(string $programToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a program</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$programToken</td>
+                <td>The program token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/Program.html"><abbr title="Hyperwallet\Model\Program">Program</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getProgramAccount">
+        <div class="location">at line         line 759</div>
+        <code>                    <a href="../Hyperwallet/Model/ProgramAccount.html"><abbr title="Hyperwallet\Model\ProgramAccount">ProgramAccount</abbr></a>
+    <strong>getProgramAccount</strong>(string $programToken, string $accountToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a program account</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$programToken</td>
+                <td>The program token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accountToken</td>
+                <td>The account token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/ProgramAccount.html"><abbr title="Hyperwallet\Model\ProgramAccount">ProgramAccount</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTransferMethodConfiguration">
+        <div class="location">at line         line 790</div>
+        <code>                    <a href="../Hyperwallet/Model/TransferMethodConfiguration.html"><abbr title="Hyperwallet\Model\TransferMethodConfiguration">TransferMethodConfiguration</abbr></a>
+    <strong>getTransferMethodConfiguration</strong>(string $userToken, string $country, string $currency, string $type, string $profileType)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a transfer method configuration</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$country</td>
+                <td>The transfer method country</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$currency</td>
+                <td>The transfer method currency</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>The transfer method type</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$profileType</td>
+                <td>The profile type</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/TransferMethodConfiguration.html"><abbr title="Hyperwallet\Model\TransferMethodConfiguration">TransferMethodConfiguration</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listTransferMethodConfigurations">
+        <div class="location">at line         line 827</div>
+        <code>                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+    <strong>listTransferMethodConfigurations</strong>(string $userToken, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List all transfer method configurations</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The query parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listReceiptsForProgramAccount">
+        <div class="location">at line         line 855</div>
+        <code>                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+    <strong>listReceiptsForProgramAccount</strong>(string $programToken, string $accountToken, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List all program account receipts</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$programToken</td>
+                <td>The program token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$accountToken</td>
+                <td>The program account token</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The query parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a></td>
+            <td>of HyperwalletReceipt</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listReceiptsForUser">
+        <div class="location">at line         line 882</div>
+        <code>                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+    <strong>listReceiptsForUser</strong>(string $userToken, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List all user receipts</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The query parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a></td>
+            <td>of HyperwalletReceipt</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listReceiptsForPrepaidCard">
+        <div class="location">at line         line 906</div>
+        <code>                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+    <strong>listReceiptsForPrepaidCard</strong>(string $userToken, string $prepaidCardToken, array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List all prepaid card receipts</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$userToken</td>
+                <td>The user token</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$prepaidCardToken</td>
+                <td>The prepaid card token</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td>The query parameters</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a></td>
+            <td>of HyperwalletReceipt</td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWebhookNotification">
+        <div class="location">at line         line 936</div>
+        <code>                    <a href="../Hyperwallet/Model/WebhookNotification.html"><abbr title="Hyperwallet\Model\WebhookNotification">WebhookNotification</abbr></a>
+    <strong>getWebhookNotification</strong>(string $webhookNotificationToken)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a webhook notification</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$webhookNotificationToken</td>
+                <td>The webhook notification token</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Model/WebhookNotification.html"><abbr title="Hyperwallet\Model\WebhookNotification">WebhookNotification</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletArgumentException.html"><abbr title="Hyperwallet\Exception\HyperwalletArgumentException">HyperwalletArgumentException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_listWebhookNotifications">
+        <div class="location">at line         line 952</div>
+        <code>                    <a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a>
+    <strong>listWebhookNotifications</strong>(array $options = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>List all webhook notifications</p>                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$options</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../Hyperwallet/Response/ListResponse.html"><abbr title="Hyperwallet\Response\ListResponse">ListResponse</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../Hyperwallet/Exception/HyperwalletApiException.html"><abbr title="Hyperwallet\Exception\HyperwalletApiException">HyperwalletApiException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div>
+                <div id="footer">
+        Generated by <a href="http://sami.sensiolabs.org/">Sami, the API Documentation Generator</a>.
+    </div>
+
+        </div>
+    </div>
+    </body>
+
+</html>
