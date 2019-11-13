@@ -248,5 +248,25 @@ class Payment extends BaseModel implements IProgramAware {
         $this->programToken = $programToken;
         return $this;
     }
-
+    
+    /**
+     * Get the payment status
+     *
+     * @return string
+     */
+    public function getStatus() {
+        return $this->status;
+    }
+    
+    /**
+     * Set the payment status
+     *
+     * @param string $status
+     * @return Payment
+     */
+    public function setStatus($status) {
+        $this->status = $status;
+        return $this;
+    }
+    
 }
