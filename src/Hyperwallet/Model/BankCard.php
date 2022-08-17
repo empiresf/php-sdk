@@ -17,7 +17,9 @@ namespace Hyperwallet\Model;
  *
  * @property string $cardNumber The bank card number
  * @property string $cardBrand The bank card brand
+ * @property string $cvv The bank card cvv
  * @property \DateTime $dateOfExpiry The bank card expiry date
+ * @property string $processingTime The processing time
  *
  * @package Hyperwallet\Model
  */
@@ -43,6 +45,10 @@ class BankCard extends BaseModel {
 
     const CARD_BRAND_VISA = 'VISA';
     const CARD_BRAND_MASTERCARD = 'MASTERCARD';
+
+    public static function FILTERS_ARRAY() {
+        return array('status', 'createdBefore', 'createdAfter', 'sortBy', 'limit');
+    }
 
     /**
      * Creates a instance of BankCard
@@ -184,6 +190,26 @@ class BankCard extends BaseModel {
     }
 
     /**
+     * Get the bank card cvv
+     *
+     * @return string
+     */
+    public function getCvv() {
+        return $this->cvv;
+    }
+
+    /**
+     * Set the bank card cvv
+     *
+     * @param string $cvv
+     * @return BankCard
+     */
+    public function setCvv($cvv) {
+        $this->cvv = $cvv;
+        return $this;
+    }
+
+    /**
      * Get the bank card type
      *
      * @return string
@@ -209,6 +235,26 @@ class BankCard extends BaseModel {
      */
     public function setDateOfExpiry(\DateTime $dateOfExpiry = null) {
         $this->dateOfExpiry = $dateOfExpiry == null ? null : $dateOfExpiry->format('Y-m-d');
+        return $this;
+    }
+
+    /**
+     * Get the bank card processing time
+     *
+     * @return string
+     */
+    public function getProcessingTime() {
+        return $this->processingTime;
+    }
+
+    /**
+     * Set the bank card processing time
+     *
+     * @param string $processingTime
+     * @return BankCard
+     */
+    public function setProcessingTime($processingTime) {
+        $this->processingTime = $processingTime;
         return $this;
     }
 

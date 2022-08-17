@@ -1,7 +1,55 @@
 ChangeLog
 =========
+2.2.1
+-------------------
+- Updated helper for formatting document response
 
-1.3.0
+2.2.0
+-------------------
+- Added missing webhook types
+- Added taxVerificationStatus to User class
+- Added reject reasons to document class
+- Updated filters for list endpoints
+
+2.1.1 
+-------------------
+- Added filter criteria 'limit' to bank accounts
+
+2.1.0 
+-------------------
+- Added header data to the requests (user-agent, sdk version etc) 
+- Added Business Stakeholders status transitions
+- Added Transfer status transitions - get, list
+
+2.0.0 
+-------------------
+- Updated the methods to point to V4 Rest APIs
+- Added Business Stakeholders - create, update, list methods
+- Added Business Stakeholders - upload multipart document
+
+1.5.1
+-------------------
+- Added fields processingTime to BankCards, expiresOn to Payments
+
+1.5.0
+-------------------
+- Added Multipart Upload document 
+- Added Transfer refunds
+- Added Venmo accounts
+- Added User Status Transitions
+
+1.4.0
+-------------------
+- Fix TypeError thrown when response status is 204 No content
+- Add updatePayPalAccount()
+- Add CVV field to the sdk
+- Remove Relationship field from Server SDK
+- Add Business Operating Name Field to User
+- Fix incorrect Server address
+- Add PayPal account status transitions
+- Fix null pointer exception on getMessage
+
+1.3.0 (2019-01-25)
 -------------------
 - Added field "VerificationStatus" to User
 - Client-token endpoint renamed to authentication-token

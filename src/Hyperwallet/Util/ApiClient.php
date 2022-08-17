@@ -9,6 +9,8 @@ use Hyperwallet\Exception\HyperwalletException;
 use Hyperwallet\Model\BaseModel;
 use Hyperwallet\Response\ErrorResponse;
 use Hyperwallet\Util\HyperwalletEncryption;
+use Hyperwallet\Util\HyperwalletUUID;
+
 
 /**
  * The internal API client
@@ -22,11 +24,11 @@ class ApiClient {
      *
      * @var string
      */
-    const VERSION = '0.1.0';
+    const VERSION = '2.2.1';
 
     /**
      * The Guzzle http client
-     * 
+     *
      * @var Client
      */
     private $client;
@@ -37,6 +39,13 @@ class ApiClient {
      * @var HyperwalletEncryption
      */
     private $encryption;
+
+    /**
+     * The UUID generator for http request/response
+     *
+     * @var HyperwalletUUID
+     */
+    private $uuid;
 
     /**
      * Boolean flag that checks if ApiClient is constructed with encryption enabled or not
@@ -55,14 +64,17 @@ class ApiClient {
      * @param array $encryptionData Encryption data to initialize ApiClient with encryption enabled
      */
     public function __construct($username, $password, $server, $clientOptions = array(), $encryptionData = array()) {
+        $this->uuid = HyperwalletUUID::v4();
         // Setup http client if not specified
         $this->client = new Client(array_merge_recursive(array(
             'base_uri' => $server,
             'auth' => array($username, $password),
             'headers' => array(
                 'User-Agent' => 'Hyperwallet PHP SDK v' . self::VERSION,
-                'Accept' => 'application/json'
-            )
+                'Accept' => 'application/json',
+                'x-sdk-version' => self::VERSION,
+                'x-sdk-type' => 'PHP',
+                'x-sdk-contextId' => $this->uuid)
         ), $clientOptions));
         if (!empty($encryptionData) && isset($encryptionData['clientPrivateKeySetLocation']) &&
             isset($encryptionData['hyperwalletKeySetLocation'])) {
@@ -84,7 +96,7 @@ class ApiClient {
      * @throws HyperwalletApiException
      */
     public function doPost($partialUrl, array $uriParams, BaseModel $data = null, array $query = array(), array $headers = array()) {
-        return $this->doRequest('POST', $partialUrl, $uriParams, array(
+       return $this->doRequest('POST', $partialUrl, $uriParams, array(
             'query' => $query,
             'body' => $data ? \GuzzleHttp\json_encode($data->getPropertiesForCreate(), JSON_FORCE_OBJECT) : '{}',
             'headers' => array_merge($headers, array(
@@ -162,9 +174,7 @@ class ApiClient {
             $this->checkResponseHeaderContentType($response);
             $body = $this->isEncrypted ? \GuzzleHttp\json_decode(\GuzzleHttp\json_encode($this->encryption->decrypt($response->getBody())), true) :
                 \GuzzleHttp\json_decode($response->getBody(), true);
-            if (isset($body['links'])) {
-                unset($body['links']);
-            }
+
             return $body;
         } catch (ConnectException $e) {
             $errorResponse = new ErrorResponse(0, array('errors' => array(
@@ -176,6 +186,14 @@ class ApiClient {
             throw new HyperwalletApiException($errorResponse, $e);
         } catch (BadResponseException $e) {
             $body = \GuzzleHttp\json_decode($e->getResponse()->getBody(), true);
+            if (is_null($body) || !isset($body['errors']) || empty($body['errors'])) {
+                $body = array('errors' => array(
+                    array(
+                        'message' => 'Failed to get any error message from response',
+                        'code' => 'BAD_REQUEST'
+                    )
+                ));
+            }
             $errorResponse = new ErrorResponse($e->getResponse()->getStatusCode(), $body);
             throw new HyperwalletApiException($errorResponse, $e);
         }
@@ -197,4 +215,17 @@ class ApiClient {
         }
     }
 
+    /**
+     * Do a PUT call to the Hyperwallet API server
+     *
+     * @param string $partialUrl The url template
+     * @param array $uriParams The url template parameters
+     * @param array $options The request options
+     * @return array
+     *
+     * @throws HyperwalletApiException
+     */
+    public function putMultipartData($partialUrl, array $uriParams, array $options) {
+        return $this->doRequest('PUT', $partialUrl, $uriParams, $options);
+    }
 }

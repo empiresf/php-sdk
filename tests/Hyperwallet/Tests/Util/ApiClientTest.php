@@ -40,7 +40,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         // Execute test
         $data = $this->apiClient->doPost('/test', array(), $model, array('test' => 'true'));
         $this->assertArrayHasKey('test', $data);
-        $this->assertArrayNotHasKey('links', $data);
+        $this->assertArrayHasKey('links', $data);
 
         // Validate api request
         $this->validateRequest('POST', '/test', 'test=true', array('test2' => 'value2'), true);
@@ -183,7 +183,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         // Execute test
         $data = $this->apiClient->doPost('/test', array(), $model, array('test' => 'true'));
         $this->assertArrayHasKey('test', $data);
-        $this->assertArrayNotHasKey('links', $data);
+        $this->assertArrayHasKey('links', $data);
 
         // Validate api request
         $this->validateRequest('POST', '/test', 'test=true', array('test2' => 'value2'), true);
@@ -204,7 +204,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         // Execute test
         $data = $this->apiClient->doPost('/test', array(), $model, array('test' => 'true'));
         $this->assertArrayHasKey('test', $data);
-        $this->assertArrayNotHasKey('links', $data);
+        $this->assertArrayHasKey('links', $data);
 
         // Validate api request
         $this->validateRequest('POST', '/test', 'test=true', array('test2' => 'value2'), true);
@@ -225,7 +225,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         // Execute test
         $data = $this->apiClient->doPost('/test', array(), $model, array());
         $this->assertArrayHasKey('test', $data);
-        $this->assertArrayNotHasKey('links', $data);
+        $this->assertArrayHasKey('links', $data);
 
         // Validate api request
         $this->validateRequest('POST', '/test', '', array('test2' => 'value2'), true);
@@ -244,7 +244,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         // Execute test
         $data = $this->apiClient->doPost('/test', array(), null, array());
         $this->assertArrayHasKey('test', $data);
-        $this->assertArrayNotHasKey('links', $data);
+        $this->assertArrayHasKey('links', $data);
 
         // Validate api request
         $this->validateRequest('POST', '/test', '', array(), true);
@@ -265,7 +265,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         // Execute test
         $data = $this->apiClient->doPost('/test', array(), $model, array(), array('test3' => 'value3'));
         $this->assertArrayHasKey('test', $data);
-        $this->assertArrayNotHasKey('links', $data);
+        $this->assertArrayHasKey('links', $data);
 
         // Validate api request
         $this->validateRequest('POST', '/test', '', array('test2' => 'value2'), true, array('test3' => 'value3'));
@@ -286,7 +286,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         // Execute test
         $data = $this->apiClient->doPost('/test/{test}', array('test' => 'token'), $model, array());
         $this->assertArrayHasKey('test', $data);
-        $this->assertArrayNotHasKey('links', $data);
+        $this->assertArrayHasKey('links', $data);
 
         // Validate api request
         $this->validateRequest('POST', '/test/token', '', array('test2' => 'value2'), true);
@@ -477,7 +477,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         // Execute test
         $data = $this->apiClient->doPut('/test', array(), $model, array('test' => 'true'));
         $this->assertArrayHasKey('test', $data);
-        $this->assertArrayNotHasKey('links', $data);
+        $this->assertArrayHasKey('links', $data);
 
         // Validate api request
         $this->validateRequest('PUT', '/test', 'test=true', array(), true);
@@ -499,7 +499,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         // Execute test
         $data = $this->apiClient->doPut('/test', array(), $model, array('test' => 'true'));
         $this->assertArrayHasKey('test', $data);
-        $this->assertArrayNotHasKey('links', $data);
+        $this->assertArrayHasKey('links', $data);
 
         // Validate api request
         $this->validateRequest('PUT', '/test', 'test=true', array('test2' => 'value2'), true);
@@ -521,7 +521,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         // Execute test
         $data = $this->apiClient->doPut('/test', array(), $model, array());
         $this->assertArrayHasKey('test', $data);
-        $this->assertArrayNotHasKey('links', $data);
+        $this->assertArrayHasKey('links', $data);
 
         // Validate api request
         $this->validateRequest('PUT', '/test', '', array('test2' => 'value2'), true);
@@ -543,7 +543,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         // Execute test
         $data = $this->apiClient->doPut('/test/{test}', array('test' => 'token'), $model, array());
         $this->assertArrayHasKey('test', $data);
-        $this->assertArrayNotHasKey('links', $data);
+        $this->assertArrayHasKey('links', $data);
 
         // Validate api request
         $this->validateRequest('PUT', '/test/token', '', array('test2' => 'value2'), true);
@@ -713,7 +713,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         // Execute test
         $data = $this->apiClient->doGet('/test', array(), array('test' => 'true'));
         $this->assertArrayHasKey('test', $data);
-        $this->assertArrayNotHasKey('links', $data);
+        $this->assertArrayHasKey('links', $data);
 
         // Validate api request
         $this->validateRequest('GET', '/test', 'test=true', array('test2' => 'value2'), false);
@@ -732,7 +732,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         // Execute test
         $data = $this->apiClient->doGet('/test', array(), array());
         $this->assertArrayHasKey('test', $data);
-        $this->assertArrayNotHasKey('links', $data);
+        $this->assertArrayHasKey('links', $data);
 
         // Validate api request
         $this->validateRequest('GET', '/test', '', array('test2' => 'value2'), false);
@@ -766,7 +766,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         // Execute test
         $data = $this->apiClient->doGet('/test/{test}', array('test' => 'token'), array());
         $this->assertArrayHasKey('test', $data);
-        $this->assertArrayNotHasKey('links', $data);
+        $this->assertArrayHasKey('links', $data);
 
         // Validate api request
         $this->validateRequest('GET', '/test/token', '', array('test2' => 'value2'), false);
@@ -896,6 +896,30 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         $this->validateRequest('GET', '/test', '', array('test2' => 'value2'), false);
     }
 
+    public function testDoGet_throw_exception_bad_request_with_empty_response() {
+        // Setup data
+        $mockHandler = new MockHandler(array(
+            new Response(400, array(), \GuzzleHttp\json_encode(array('errors' => array())))
+        ));
+        $this->createApiClient($mockHandler);
+
+        // Execute test
+        try {
+            $this->apiClient->doGet('/test', array(), array());
+            $this->fail('HyperwalletApiException expected');
+        } catch (HyperwalletApiException $e) {
+            $this->assertEquals('Failed to get any error message from response', $e->getMessage());
+            $this->assertNotNull($e->getErrorResponse());
+
+            $this->assertEquals(400, $e->getErrorResponse()->getStatusCode());
+
+            $this->assertEquals('BAD_REQUEST', $e->getErrorResponse()->getErrors()[0]->getCode());
+            $this->assertEquals('Failed to get any error message from response', $e->getErrorResponse()->getErrors()[0]->getMessage());
+
+            $this->assertEquals(null, $e->getRelatedResources());
+        }
+    }
+
 
     private function validateRequest($method, $path, $query, array $body, $hasContentType, array $headers = array(), $isEncrypted = false) {
         // Validate api request
@@ -905,7 +929,7 @@ class ApiClientTest extends \PHPUnit_Framework_TestCase {
         $request = $this->container[0]['request'];
         $this->assertEquals($method, $request->getMethod());
 
-        $this->assertCount(($hasContentType ? 6 : 4) + count($headers), $request->getHeaders());
+        $this->assertCount(($hasContentType ? 9 : 7) + count($headers), $request->getHeaders());
         $this->assertArrayHasKeyAndValue('Accept', $isEncrypted ? 'application/jose+json' : 'application/json', $request->getHeaders());
         if ($hasContentType) {
             $this->assertArrayHasKeyAndValue('Content-Type', $isEncrypted ? 'application/jose+json' : 'application/json', $request->getHeaders());

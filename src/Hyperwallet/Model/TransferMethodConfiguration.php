@@ -2,7 +2,7 @@
 namespace Hyperwallet\Model;
 
 /**
- * Represents a V3 Program
+ * Represents a V4 Program
  *
  * @property string[] $countries The transfer method countries
  * @property string[] $currencies The transfer method currencies
@@ -22,6 +22,10 @@ class TransferMethodConfiguration extends BaseModel {
      * @var string[]
      */
     private static $READ_ONLY_FIELDS = array('countries', 'currencies', 'type', 'profileType', 'fields');
+
+    public static function FILTERS_ARRAY() {
+        return array('userToken', 'limit');
+    }
 
     /**
      * Creates a instance of TransferMethodConfiguration

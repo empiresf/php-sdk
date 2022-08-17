@@ -1,24 +1,22 @@
 <?php
-namespace Hyperwallet\Model;
 
+
+namespace Hyperwallet\Model;
 /**
- * Represents a V4 PayPal Account
+ * Represents a V4 Venmo Account
  *
- * @property string $token The PayPal account token
- * @property string $status The PayPal account status
- * @property \DateTime $createdOn The PayPal account creation date
+ * @property string $token The Venmo account token
+ * @property string $status The Venmo account status
+ * @property \DateTime $createdOn The Venmo account creation date
  * @property string $type The transfer method type
  * @property string $transferMethodCountry The transfer method country
  * @property string $transferMethodCurrency The transfer method currency
  * @property string $isDefaultTransferMethod The is default transfer method
- * @property string $email The PayPal account email
-
+ * @property string $accountId The Venmo account
  *
  * @package Hyperwallet\Model
  */
-
-class PayPalAccount extends BaseModel {
-
+class VenmoAccount extends BaseModel {
     /**
      * @internal
      *
@@ -29,11 +27,11 @@ class PayPalAccount extends BaseModel {
     private static $READ_ONLY_FIELDS = array('token', 'status', 'createdOn');
 
     public static function FILTERS_ARRAY() {
-        return array('status', 'createdOn' , 'createdBefore', 'createdAfter', 'sortBy', 'limit');
+        return array('status', 'type', 'createdBefore', 'createdAfter', 'sortBy', 'limit');
     }
 
     /**
-     * Creates a instance of PayPalAccount
+     * Creates a instance of VenmoAccount
      *
      * @param string[] $properties The default properties
      */
@@ -42,7 +40,7 @@ class PayPalAccount extends BaseModel {
     }
 
     /**
-     * Get the PayPal account token
+     * Get the Venmo account token
      *
      * @return string
      */
@@ -51,10 +49,10 @@ class PayPalAccount extends BaseModel {
     }
 
     /**
-     * Set the PayPal account token
+     * Set the Venmo account token
      *
      * @param string $token
-     * @return PayPalAccount
+     * @return VenmoAccount
      */
     public function setToken($token) {
         $this->token = $token;
@@ -62,7 +60,7 @@ class PayPalAccount extends BaseModel {
     }
 
     /**
-     * Get the PayPal account status
+     * Get the Venmo account status
      *
      * @return string
      */
@@ -71,7 +69,7 @@ class PayPalAccount extends BaseModel {
     }
 
     /**
-     * Get the PayPal account creation date
+     * Get the Venmo account creation date
      *
      * @return \DateTime
      */
@@ -92,7 +90,7 @@ class PayPalAccount extends BaseModel {
      * Set the transfer method type
      *
      * @param string $type
-     * @return PayPalAccount
+     * @return VenmoAccount
      */
     public function setType($type) {
         $this->type = $type;
@@ -112,7 +110,7 @@ class PayPalAccount extends BaseModel {
      * Set the transfer method country
      *
      * @param string $transferMethodCountry
-     * @return PayPalAccount
+     * @return VenmoAccount
      */
     public function setTransferMethodCountry($transferMethodCountry) {
         $this->transferMethodCountry = $transferMethodCountry;
@@ -132,7 +130,7 @@ class PayPalAccount extends BaseModel {
      * Set the transfer method currency
      *
      * @param string $transferMethodCurrency
-     * @return PayPalAccount
+     * @return VenmoAccount
      */
     public function setTransferMethodCurrency($transferMethodCurrency) {
         $this->transferMethodCurrency = $transferMethodCurrency;
@@ -152,7 +150,7 @@ class PayPalAccount extends BaseModel {
      * Set the is default transfer method
      *
      * @param string $isDefaultTransferMethod
-     * @return PayPalAccount
+     * @return VenmoAccount
      */
     public function setIsDefaultTransferMethod($isDefaultTransferMethod) {
         $this->isDefaultTransferMethod = $isDefaultTransferMethod;
@@ -160,22 +158,24 @@ class PayPalAccount extends BaseModel {
     }
 
     /**
-     * Get the PayPal account email
+     * Get the Venmo account
      *
      * @return string
      */
-    public function getEmail() {
-        return $this->email;
+    public function getAccountId() {
+        return $this->accountId;
     }
 
     /**
-     * Set the PayPal account email
+     * Set the Venmo account
      *
-     * @param string $email
-     * @return PayPalAccount
+     * @param string $accountId
+     * @return VenmoAccount
      */
-    public function setEmail($email) {
-        $this->email = $email;
+    public function setAccountId($accountId) {
+        $this->accountId = $accountId;
         return $this;
     }
+
+
 }

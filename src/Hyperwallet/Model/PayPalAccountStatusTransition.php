@@ -1,21 +1,24 @@
 <?php
+
 namespace Hyperwallet\Model;
 
 /**
- * Represents a V4 Paper Check Status Transition
+ * Represents a V4 PayPal Account Status Transition
  *
  * @package Hyperwallet\Model
  */
-class PaperCheckStatusTransition extends StatusTransition {
+class PayPalAccountStatusTransition extends StatusTransition
+{
 
     const TRANSITION_DE_ACTIVATED = 'DE_ACTIVATED';
 
     /**
-     * Creates a instance of PaperCheckStatusTransition
+     * Creates a instance of PayPalAccountStatusTransition
      *
      * @param string[] $properties The default properties
      */
-    public function __construct(array $properties = array()) {
+    public function __construct(array $properties = array())
+    {
         parent::__construct($properties);
     }
 

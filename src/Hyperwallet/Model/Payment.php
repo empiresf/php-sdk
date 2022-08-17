@@ -2,9 +2,10 @@
 namespace Hyperwallet\Model;
 
 /**
- * Represents a V3 Payment
+ * Represents a V4 Payment
  *
  * @property string $token The payment token
+ * @property string $status The status
  * @property \DateTime $createdOn The payment creation date
  *
  * @property string $clientPaymentId The client payment id
@@ -15,6 +16,7 @@ namespace Hyperwallet\Model;
  * @property string $memo The payment memo
  * @property string $purpose The payment purpose
  * @property \DateTime $releaseOn The payment release date
+ * @property \DateTime $expiresOn The payment expiry date
  *
  * @property string $destinationToken The payment destination token
  * @property string $programToken The payment program token
@@ -31,6 +33,10 @@ class Payment extends BaseModel implements IProgramAware {
      * @var string[]
      */
     private static $READ_ONLY_FIELDS = array('token', 'createdOn');
+
+    public static function FILTERS_ARRAY() {
+        return array('clientPaymentId', 'releaseDate', 'createdBefore', 'createdAfter', 'sortBy', 'limit');
+    }
 
     /**
      * Creates a instance of Payment
@@ -58,6 +64,26 @@ class Payment extends BaseModel implements IProgramAware {
      */
     public function setToken($token) {
         $this->token = $token;
+        return $this;
+    }
+
+    /**
+     * Get the status
+     *
+     * @return string
+     */
+    public function getStatus() {
+        return $this->status;
+    }
+
+    /**
+     * Set the status
+     *
+     * @param string $status
+     * @return Payment
+     */
+    public function setStatus($status) {
+        $this->status = $status;
         return $this;
     }
 
@@ -210,6 +236,25 @@ class Payment extends BaseModel implements IProgramAware {
     }
 
     /**
+     * Get the payment expiry date
+     * @return \DateTime
+     */
+    public function getExpiresOn() {
+        return $this->expiresOn ? new \DateTime($this->expiresOn) : null;
+    }
+
+    /**
+     * Set the payment expiry date
+     *
+     * @param \DateTime $expiresOn
+     * @return Payment
+     */
+    public function setExpiresOn(\DateTime $expiresOn = null) {
+        $this->expiresOn = $expiresOn == null ? null : $expiresOn->format('Y-m-d\TH:i:s');
+        return $this;
+    }
+
+    /**
      * Get the payment destination token
      *
      * @return string
@@ -240,7 +285,7 @@ class Payment extends BaseModel implements IProgramAware {
 
     /**
      * Set the payment program token
-     * 
+     *
      * @param string $programToken
      * @return Payment
      */

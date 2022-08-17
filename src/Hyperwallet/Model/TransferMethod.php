@@ -2,7 +2,7 @@
 namespace Hyperwallet\Model;
 
 /**
- * Represents a V3 Transfer Method
+ * Represents a V4 Transfer Method
  *
  * @property string $token The transfer method token
  * @property string $type The transfer method type
@@ -25,7 +25,6 @@ namespace Hyperwallet\Model;
  * @property string $branchName The branch name
  * @property string $branchId The branch id
  * @property string $bankAccountId The bank account id
- * @property string $bankAccountRelationship The bank account relationship
  * @property string $bankAccountPurpose The bank account purpose
  *
  * @property string $branchAddressLine1 The branch address line 1
@@ -51,6 +50,7 @@ namespace Hyperwallet\Model;
  * @property string $profileType The profile type
  *
  * @property string $businessName The business name
+ * @property string $businessOperatingName The business operating name
  * @property string $businessRegistrationId The business registration id
  * @property string $businessRegistrationCountry The business registration country
  *
@@ -84,6 +84,10 @@ class TransferMethod extends BaseModel {
      */
     private static $READ_ONLY_FIELDS = array('token', 'status', 'cardType', 'cardNumber', 'cardBrand', 'dateOfExpiry', 'createdOn');
 
+    public static function FILTERS_ARRAY() {
+        return array('status', 'type', 'createdBefore', 'createdAfter', 'sortBy', 'limit');
+    }
+
     const TYPE_PREPAID_CARD = 'PREPAID_CARD';
     const TYPE_BANK_ACCOUNT = 'BANK_ACCOUNT';
     const TYPE_WIRE_ACCOUNT = 'WIRE_ACCOUNT';
@@ -104,17 +108,6 @@ class TransferMethod extends BaseModel {
 
     const CARD_BRAND_VISA = 'VISA';
     const CARD_BRAND_MASTERCARD = 'MASTERCARD';
-
-    const BANK_ACCOUNT_RELATIONSHIP_SELF = 'SELF';
-    const BANK_ACCOUNT_RELATIONSHIP_JOINT_ACCOUNT = 'JOINT_ACCOUNT';
-    const BANK_ACCOUNT_RELATIONSHIP_SPOUSE = 'SPOUSE';
-    const BANK_ACCOUNT_RELATIONSHIP_RELATIVE = 'RELATIVE';
-    const BANK_ACCOUNT_RELATIONSHIP_BUSINESS_PARTNER = 'BUSINESS_PARTNER';
-    const BANK_ACCOUNT_RELATIONSHIP_UPLINE = 'UPLINE';
-    const BANK_ACCOUNT_RELATIONSHIP_DOWNLINE = 'DOWNLINE';
-    const BANK_ACCOUNT_RELATIONSHIP_OWN_COMPANY = 'OWN_COMPANY';
-    const BANK_ACCOUNT_RELATIONSHIP_BILL_PAYMENT = 'BILL_PAYMENT';
-    const BANK_ACCOUNT_RELATIONSHIP_OTHER = 'OTHER';
 
     const PROFILE_TYPE_INDIVIDUAL = 'INDIVIDUAL';
     const PROFILE_TYPE_BUSINESS = 'BUSINESS';
@@ -203,7 +196,7 @@ class TransferMethod extends BaseModel {
     public function getDateOfExpiry() {
         return $this->dateOfExpiry ? new \DateTime($this->dateOfExpiry) : null;
     }
-    
+
     /**
      * Get the bank account id
      *
@@ -379,26 +372,6 @@ class TransferMethod extends BaseModel {
      */
     public function getCreatedOn() {
         return $this->createdOn ? new \DateTime($this->createdOn) : null;
-    }
-
-    /**
-     * Get the bank account relationship
-     *
-     * @return string
-     */
-    public function getBankAccountRelationship() {
-        return $this->bankAccountRelationship;
-    }
-
-    /**
-     * Set the bank account relationship
-     *
-     * @param string $bankAccountRelationship
-     * @return TransferMethod
-     */
-    public function setBankAccountRelationship($bankAccountRelationship) {
-        $this->bankAccountRelationship = $bankAccountRelationship;
-        return $this;
     }
 
     /**
@@ -778,6 +751,28 @@ class TransferMethod extends BaseModel {
      */
     public function setBusinessName($businessName) {
         $this->businessName = $businessName;
+        return $this;
+    }
+
+    /**
+     * Get the business operating name
+     *
+     * @return string
+     */
+    public function getBusinessOperatingName()
+    {
+        return $this->businessOperatingName;
+    }
+
+    /**
+     * Set the business operating name
+     *
+     * @param string $businessOperatingName
+     * @return TransferMethod
+     */
+    public function setBusinessOperatingName($businessOperatingName)
+    {
+        $this->businessOperatingName = $businessOperatingName;
         return $this;
     }
 

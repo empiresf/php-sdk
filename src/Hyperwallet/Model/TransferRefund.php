@@ -4,10 +4,9 @@ namespace Hyperwallet\Model;
 /**
  * Represents a V4 Transfer
  *
- * @property string $token The transfer token
+ * @property string $token The transfer refund token
  * @property string $status The transfer status
- * @property \DateTime $createdOn The transfer creation date
- * @property string $clientTransferId The client transfer id
+ * @property string $clientRefundId The client transfer id
  * @property string $sourceToken The source token
  * @property string $sourceAmount The source amount
  * @property string $sourceFeeAmount The source fee amount
@@ -17,15 +16,15 @@ namespace Hyperwallet\Model;
  * @property string $destinationFeeAmount The destination fee amount
  * @property string $destinationCurrency The destination currency
  * @property array $foreignExchanges The foreign exchanges
+ * @property \DateTime $createdOn The transfer creation date
  * @property string $notes The notes
  * @property string $memo The memo
- * @property \DateTime $expiresOn The transfer expiration date
-
  *
  * @package Hyperwallet\Model
  */
 
-class Transfer extends BaseModel {
+
+class TransferRefund extends BaseModel {
 
     /**
      * @internal
@@ -34,24 +33,14 @@ class Transfer extends BaseModel {
      *
      * @var string[]
      */
-    private static $READ_ONLY_FIELDS = array('token', 'status', 'createdOn', 'sourceFeeAmount', 'destinationFeeAmount', 'foreignExchanges', 'expiresOn');
+    private static $READ_ONLY_FIELDS = array('token', 'status', 'createdOn');
 
-    const STATUS_QUOTED = 'QUOTED';
-    const STATUS_SCHEDULED = 'SCHEDULED';
-    const STATUS_IN_PROGRESS = 'IN_PROGRESS';
-    const STATUS_VERIFICATION_REQUIRED = 'VERIFICATION_REQUIRED';
+    const STATUS_QUOTED = 'PENDING';
     const STATUS_COMPLETED = 'COMPLETED';
-    const STATUS_CANCELLED = 'CANCELLED';
-    const STATUS_RETURNED = 'RETURNED';
     const STATUS_FAILED = 'FAILED';
-    const STATUS_EXPIRED = 'EXPIRED';
-
-    public static function FILTERS_ARRAY() {
-        return array('clientTransferId','sourceToken','destinationToken', 'createdBefore', 'createdAfter', 'limit');
-    }
 
     /**
-     * Creates a instance of Transfer
+     * Creates a instance of TransferRefund
      *
      * @param string[] $properties The default properties
      */
@@ -72,7 +61,7 @@ class Transfer extends BaseModel {
      * Set the transfer token
      *
      * @param string $token
-     * @return Transfer
+     * @return TransferRefund
      */
     public function setToken($token) {
         $this->token = $token;
@@ -89,32 +78,32 @@ class Transfer extends BaseModel {
     }
 
     /**
+     * Get the transfer token
+     *
+     * @return string
+     */
+    public function getClientRefundId() {
+        return $this->clientRefundId;
+    }
+
+    /**
+     * Set the transfer token
+     *
+     * @param string $token
+     * @return TransferRefund
+     */
+    public function setClientRefundId($clientRefundId) {
+        $this->clientRefundId = $clientRefundId;
+        return $this;
+    }
+
+    /**
      * Get the transfer creation date
      *
      * @return \DateTime
      */
     public function getCreatedOn() {
         return $this->createdOn ? new \DateTime($this->createdOn) : null;
-    }
-
-    /**
-     * Get transfer clientTransferId
-     *
-     * @return string
-     */
-    public function getClientTransferId() {
-        return $this->clientTransferId;
-    }
-
-    /**
-     * Set transfer clientTransferId
-     *
-     * @param string $clientTransferId
-     * @return Transfer
-     */
-    public function setClientTransferId($clientTransferId) {
-        $this->clientTransferId = $clientTransferId;
-        return $this;
     }
 
     /**
@@ -130,7 +119,7 @@ class Transfer extends BaseModel {
      * Set transfer sourceToken
      *
      * @param string $sourceToken
-     * @return Transfer
+     * @return TransferRefund
      */
     public function setSourceToken($sourceToken) {
         $this->sourceToken = $sourceToken;
@@ -150,7 +139,7 @@ class Transfer extends BaseModel {
      * Set transfer sourceAmount
      *
      * @param string $sourceAmount
-     * @return Transfer
+     * @return TransferRefund
      */
     public function setSourceAmount($sourceAmount) {
         $this->sourceAmount = $sourceAmount;
@@ -166,6 +155,18 @@ class Transfer extends BaseModel {
         return $this->sourceFeeAmount;
     }
 
+
+    /**
+     * Set transfer sourceFeeAmount
+     *
+     * @param string $sourceFeeAmount
+     * @return TransferRefund
+     */
+    public function setSourceFeeAmount($sourceFeeAmount) {
+        $this->sourceFeeAmount = $sourceFeeAmount;
+        return $this;
+    }
+
     /**
      * Get transfer sourceCurrency
      *
@@ -179,7 +180,7 @@ class Transfer extends BaseModel {
      * Set transfer sourceCurrency
      *
      * @param string $sourceCurrency
-     * @return Transfer
+     * @return TransferRefund
      */
     public function setSourceCurrency($sourceCurrency) {
         $this->sourceCurrency = $sourceCurrency;
@@ -199,7 +200,7 @@ class Transfer extends BaseModel {
      * Set transfer destinationToken
      *
      * @param string $destinationToken
-     * @return Transfer
+     * @return TransferRefund
      */
     public function setDestinationToken($destinationToken) {
         $this->destinationToken = $destinationToken;
@@ -219,7 +220,7 @@ class Transfer extends BaseModel {
      * Set transfer destinationAmount
      *
      * @param string $destinationAmount
-     * @return Transfer
+     * @return TransferRefund
      */
     public function setDestinationAmount($destinationAmount) {
         $this->destinationAmount = $destinationAmount;
@@ -244,24 +245,16 @@ class Transfer extends BaseModel {
         return $this->destinationCurrency;
     }
 
+
     /**
      * Set transfer destinationCurrency
      *
      * @param string $destinationCurrency
-     * @return Transfer
+     * @return TransferRefund
      */
     public function setDestinationCurrency($destinationCurrency) {
         $this->destinationCurrency = $destinationCurrency;
         return $this;
-    }
-
-    /**
-     * Get transfer foreignExchanges
-     *
-     * @return array
-     */
-    public function getForeignExchanges() {
-        return $this->foreignExchanges;
     }
 
     /**
@@ -277,7 +270,7 @@ class Transfer extends BaseModel {
      * Set transfer notes
      *
      * @param string $notes
-     * @return Transfer
+     * @return TransferRefund
      */
     public function setNotes($notes) {
         $this->notes = $notes;
@@ -297,7 +290,7 @@ class Transfer extends BaseModel {
      * Set transfer memo
      *
      * @param string $memo
-     * @return Transfer
+     * @return TransferRefund
      */
     public function setMemo($memo) {
         $this->memo = $memo;
@@ -305,11 +298,23 @@ class Transfer extends BaseModel {
     }
 
     /**
-     * Get transfer expiresOn
+     * Get transfer memo
      *
-     * @return \DateTime
+     * @return string
      */
-    public function getExpiresOn() {
-        return $this->expiresOn ? new \DateTime($this->expiresOn) : null;
+    public function getForeignExchanges() {
+        return $this->foreignExchanges;
     }
+
+    /**
+     * Set transfer memo
+     *
+     * @param string $memo
+     * @return TransferRefund
+     */
+    public function setForeignExchanges($foreignExchanges) {
+        $this->foreignExchanges = $foreignExchanges;
+        return $this;
+    }
+
 }
